@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>userinterface.js-consoru</title>
+	<link rel="stylesheet" href="./resource/consoru.css">
+	<link rel="stylesheet" href="./resource/heibon.css">
+	<link rel="stylesheet" href="./lib/css-generics/index.css">
+	<style>
+		body {
+			background-color: var(--COLOR_TUNDORA);
+			color: white;
+		}
+	</style>
+	<script src="./lib/userinterface.js/src/userinterface.js"></script>
+	<script src="./lib/userinterface.js-collection/userinterface/tab.js"></script>
+	<script>
+		UserInterface.DEBUG = true
+		Consoru = {}
+	</script>
+	<script src="./src/object/console.js"></script>
+	<script src="./src/object/button.js"></script>
+	<script src="./src/object/tab.js"></script>
+	<script src="./src/object/row.js"></script>
+	<script src="./src/userinterface/console.js"></script>
+	<script src="./src/userinterface/console.binding.js"></script>
+	<script src="./src/userinterface/rows.js"></script>
+	<script src="./src/userinterface/rows.binding.js"></script>
+	<script src="./src/userinterface/row.js"></script>
+	<script src="./src/userinterface/row.binding.js"></script>
+</head>
+<body>
+	<script>
+		UserInterface.runModel("consoru.console", { bindingArgs: [[
+			{"name": "Errors", data: ["Error 1", "Error 2"]},
+			{"name": "Queries", data: ["Query 1", "Query 2"]}
+			], 0], parentNode: document.body })
+	</script>
+</body>
+</html>
